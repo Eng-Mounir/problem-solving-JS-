@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Prompt Example</title>
+</head>
+
+<body>
+    <script>
+    var s1 = Number(window.prompt("Enter marks of subject 1:"));
+    var s2 = Number(window.prompt("Enter marks of subject 2:"));
+    var s3 = Number(window.prompt("Enter marks of subject 3:"));
+    var s4 = Number(window.prompt("Enter marks of subject 4:"));
+    var s5 = Number(window.prompt("Enter marks of subject 5:"));
+
+    //Calculate total
+    var total = s1 + s2 + s3 + s4 + s5;
+
+    //Calculate average
+    var average = total / 5;
+
+    //Percentage
+    var percentage = (total / 500) * 100;
+
+    // Print results
+    console.log("Total Marks = " + total);
+    console.log("Average Marks = " + average);
+    console.log("Percentage = " + percentage + "%");
+
+    </script>
+</body>
+
+</html>
