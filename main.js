@@ -148,3 +148,40 @@ switch (month) {
     default:
         console.log("Not a valid month number");
 }
+
+
+//Question 14 14 Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer  Find percentage and grade
+var m1 = Number(window.prompt("Please enter Physics grade : "));
+var m2 = Number(window.prompt("Please enter Chemistry grade: "));
+var m3 = Number(window.prompt("Please enter Biology grade : "));
+var m4 = Number(window.prompt("Please enter Mathematics grade : "));
+var m5 = Number(window.prompt("Please enter Computer grade : "));
+
+var sum = m1 + m2 + m3 + m4 + m5;
+var percentage = (sum / 500) * 100;
+switch (true) {
+    case percentage >= 90:
+        console.log("Grad A");
+        break;
+    
+    case percentage >= 80:
+        console.log("Grad B");
+        break;
+    
+    case percentage >= 70:
+        console.log("Grad C");
+        break;
+    
+    case percentage >= 60:
+        console.log("Grad D");
+        break;
+    
+    case percentage >= 40:
+        console.log("Grad E");
+        break;
+    case percentage < 40:
+        console.log("Grad F");
+        break;
+    default:
+        console.log("Not a valid grade")
+}
