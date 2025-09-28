@@ -62,7 +62,6 @@ console.log("Min element = " + min);
 
 //Question 6 Write a program that allows the user to insert integer number then check If a number is oven or odd
 var a = Number(window.prompt("Enter first number to check for even or odd:"));
-var b = Number(window.prompt("Enter second number to check for even or odd:"));
 if (a % 2 == 0) {
     console.log("even");
 }
@@ -127,7 +126,7 @@ console.log(a ** b);
     console.log("Percentage = " + percentage + "%");
 
 
-//Question 13 Write a program to input month number and print number of days in that month.
+//Question 13 Write a program to input month number and print number of days in that month.(Switch case)
 
 var month = Number(window.prompt("Please enter a month number: "));
 var days;
@@ -148,9 +147,27 @@ switch (month) {
     default:
         console.log("Not a valid month number");
 }
+//Question 13 Write a program to input month number and print number of days in that month.(if condition)
+
+var month = Number(window.prompt("Please enter a month number: "));
+var days;
+if (month == 1 && month == 3 && month == 5 && month == 7 && month == 8 && month == 10 && month == 12) {
+    days = 31;
+    console.log(days);
+} else if (month == 4 && month == 6 && month == 9 && month == 11) {
+        days = 30;
+        console.log(days);
+}
+else if (month == 28) {
+        days = 28;
+        console.log(days);
+}
+else {
+    console.log("Not a valid month number");
+    }
 
 
-//Question 14 14 Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer  Find percentage and grade
+//Question 14 Write a program to input marks of five subjects Physics, Chemistry, Biology, Mathematics and Computer  Find percentage and grade
 var m1 = Number(window.prompt("Please enter Physics grade : "));
 var m2 = Number(window.prompt("Please enter Chemistry grade: "));
 var m3 = Number(window.prompt("Please enter Biology grade : "));
@@ -184,4 +201,75 @@ switch (true) {
         break;
     default:
         console.log("Not a valid grade")
+}
+
+//Question 15 Write a program to print total number of days in month
+
+var month = Number(window.prompt("Enter month number (1-12):"));
+var days;
+
+switch (month) {
+    case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+        days = 31;
+        break;
+
+    case 4: case 6: case 9: case 11:
+        days = 30;
+        break;
+
+    case 2:
+        days = 28; 
+        break;
+
+    default:
+        console.log("Invalid month number! Please enter 1–12.");
+}
+
+if (days) {
+    console.log(`Month ${month} has ${days} days.`);
+}
+
+//Question 16 Write a program to check whether an alphabet is vowel or consonant
+var a = window.prompt("Enter a character to check if it is a vowel:");
+a = a.toLowerCase();
+
+switch (a) {
+    case "a": case "e": case "i": case "o": case "u":
+        console.log("Vowel");
+        break;
+    default:
+        console.log("Consonant");
+}
+
+//Question 17 Write a program to find maximum between two numbers
+var a = window.prompt("Enter a first number:");
+var b = window.prompt("Enter a second number:");
+var maxNum = a;
+switch (true) {
+    case maxNum < b:
+        maxNum = b;
+        console.log(`the max number is ${maxNum}`);
+        break;
+    default:
+        console.log(`the max number is ${maxNum}`);
+}
+
+//Question 17 Write a program to check whether a number is even or odd
+var a = Number(window.prompt("Enter first number to check for even or odd:"));
+switch (true) {
+    case a % 2 == 0:
+        console.log(`even number`);
+        break;
+    default:
+        console.log(`odd number`);
+}
+
+//Question 18 Write a program to check whether a number is positive or negative or zero
+var a = Number(window.prompt("Enter first number to check for even or odd:"));
+switch (true) {
+    case a >=0:
+        console.log(`positive number`);
+        break;
+    default:
+        console.log(`negative number`);
 }
