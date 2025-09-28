@@ -7,25 +7,25 @@
 
 <body>
     <script>
-    var s1 = Number(window.prompt("Enter marks of subject 1:"));
-    var s2 = Number(window.prompt("Enter marks of subject 2:"));
-    var s3 = Number(window.prompt("Enter marks of subject 3:"));
-    var s4 = Number(window.prompt("Enter marks of subject 4:"));
-    var s5 = Number(window.prompt("Enter marks of subject 5:"));
+    var month = Number(window.prompt("Please enter a month number: "));
+        var days;
 
-    //Calculate total
-    var total = s1 + s2 + s3 + s4 + s5;
-
-    //Calculate average
-    var average = total / 5;
-
-    //Percentage
-    var percentage = (total / 500) * 100;
-
-    // Print results
-    console.log("Total Marks = " + total);
-    console.log("Average Marks = " + average);
-    console.log("Percentage = " + percentage + "%");
+        switch (month) {
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                days = 31;
+                console.log(days);
+                break;
+            case 4: case 6: case 9: case 11:
+                days = 30;
+                console.log(days);
+                break;
+            case 2:
+                days = 28;
+                console.log(days);
+                break;
+            default:
+                console.log("Not a valid month number");
+        }
 
     </script>
 </body>
