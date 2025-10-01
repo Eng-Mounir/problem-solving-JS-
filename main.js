@@ -273,3 +273,42 @@ switch (true) {
     default:
         console.log(`negative number`);
 }
+
+
+//20 Write a program to create Simple Calculator
+// Simple Calculator using switch case
+
+var num1 = Number(window.prompt("Enter first number: "));
+var num2 = Number(window.prompt("Enter second number: "));
+var operator = window.prompt("Enter operator (+, -, *, /):");
+
+var result;
+
+switch (operator) {
+    case "+":
+        result = num1 + num2;
+        console.log(`${num1} + ${num2} = ${result}`);
+        break;
+
+    case "-":
+        result = num1 - num2;
+        console.log(`${num1} - ${num2} = ${result}`);
+        break;
+
+    case "*":
+        result = num1 * num2;
+        console.log(`${num1} * ${num2} = ${result}`);
+        break;
+
+    case "/":
+        if (num2 !== 0) {
+            result = num1 / num2;
+            console.log(`${num1} / ${num2} = ${result}`);
+        } else {
+            console.log("Error: Division by zero is not allowed!");
+        }
+        break;
+
+    default:
+        console.log("Invalid operator! Please enter +, -, *, or /.");
+}
